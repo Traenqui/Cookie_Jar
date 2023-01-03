@@ -1,12 +1,15 @@
 [tool.poetry]
 name = "{{cookiecutter.package_name}}"
-version = "0.0.0"
+version = "{{cookiecutter.version}}"
 description = "{{cookiecutter.project_description}}"
 authors = [
     "{{cookiecutter.author_name}} <{{cookiecutter.email}}>",
 ]
 readme = "README.md"
 license = "MIT"
+classifiers = [
+    "{{cookiecutter.development_status}}",
+]
 
 [tool.poetry.dependencies]
 python = "{{cookiecutter.compatible_python_versions}}"

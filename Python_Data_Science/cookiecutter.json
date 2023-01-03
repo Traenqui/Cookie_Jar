@@ -2,6 +2,7 @@
     "project_name": "project-name",
     "package_name": "{{ cookiecutter.project_name.replace('-', '_') }}",
     "friendly_name": "{{ cookiecutter.project_name.replace('-', ' ').title() }}",
+    "project_description": "A short description of the project",
     "author_name": "Jonas Gerber",
     "github_user": "Traenqui",
     "email": "j.gerber2803@gmail.com",
