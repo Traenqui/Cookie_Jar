@@ -2,7 +2,8 @@
 
 {{cookiecutter.project_description}}
 
-______________________________________________________________________
+---
+
 [![PyPI Status](https://badge.fury.io/py/{{ cookiecutter.package_name }}.svg)](https://pypi.org/project/{{ cookiecutter.package_name }}/)
 [![Documentation](https://img.shields.io/badge/docs-passing-green)](https://{{ cookiecutter.github_user }}.github.io/{{ cookiecutter.package_name }}/{{ cookiecutter.package_name }}.html)
 [![License](https://img.shields.io/github/license/{{ cookiecutter.github_user }}/{{ cookiecutter.package_name }})](https://github.com/{{ cookiecutter.github_user }}/{{ cookiecutter.package_name }}/blob/main/LICENSE)
@@ -10,11 +11,9 @@ ______________________________________________________________________
 [![Code Coverage](https://img.shields.io/badge/Coverage-0%25-red.svg)](https://github.com/{{ cookiecutter.github_user }}/{{ cookiecutter.package_name }}/tree/main/tests)
 [![Contributor Covenant](https://img.shields.io/badge/Contributor%20Covenant-2.0-4baaaa.svg)](https://github.com/{{ cookiecutter.github_user }}/{{ cookiecutter.package_name }}/blob/main/CODE_OF_CONDUCT.md)
 
-
 Developers:
 
 - {{cookiecutter.author_name}} ({{cookiecutter.email}})
-
 
 ## Setup
 
@@ -46,12 +45,14 @@ $ make view-docs
 ```
 
 ## Tools used in this project
-* [Poetry](https://towardsdatascience.com/how-to-effortlessly-publish-your-python-package-to-pypi-using-poetry-44b305362f9f): Dependency management
-* [hydra](https://hydra.cc/): Manage configuration files
-* [pre-commit plugins](https://pre-commit.com/): Automate code reviewing formatting
-* [pdoc](https://github.com/pdoc3/pdoc): Automatically create an API documentation for your project
+
+- [Poetry](https://towardsdatascience.com/how-to-effortlessly-publish-your-python-package-to-pypi-using-poetry-44b305362f9f): Dependency management
+- [hydra](https://hydra.cc/): Manage configuration files
+- [pre-commit plugins](https://pre-commit.com/): Automate code reviewing formatting
+- [pdoc](https://github.com/pdoc3/pdoc): Automatically create an API documentation for your project
 
 ## Project structure
+
 ```
 .
 ├── .flake8

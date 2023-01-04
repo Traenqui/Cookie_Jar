@@ -1,6 +1,7 @@
 # Cookie Jar
 
 ## Use
+
 To activate one of the templates within a subdirectory, use the `--directory` option:
 
 ```shell

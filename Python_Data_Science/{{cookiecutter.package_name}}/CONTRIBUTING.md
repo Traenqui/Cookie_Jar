@@ -8,7 +8,6 @@ respectable.
 In this guide you will get an overview of the contribution workflow from opening an
 issue, creating a PR, reviewing, and merging the PR.
 
-
 ## New contributor guide
 
 To get an overview of the project, read the [README](README.md). Here are some
@@ -18,7 +17,6 @@ resources to help you get started with open source contributions:
 - [Set up Git](https://docs.github.com/en/get-started/quickstart/set-up-git)
 - [GitHub flow](https://docs.github.com/en/get-started/quickstart/github-flow)
 - [Collaborating with pull requests](https://docs.github.com/en/github/collaborating-with-pull-requests)
-
 
 ## Getting started
 
@@ -41,7 +39,9 @@ find an issue to work on, you are welcome to open a PR with a fix.
 ### Make Changes
 
 1. Fork the repository.
+
 - Using GitHub Desktop:
+
   - [Getting started with GitHub Desktop](https://docs.github.com/en/desktop/installing-and-configuring-github-desktop/getting-started-with-github-desktop) will guide you through setting up Desktop.
   - Once Desktop is set up, you can use it to [fork the repo](https://docs.github.com/en/desktop/contributing-and-collaborating-using-github-desktop/cloning-and-forking-repositories-from-github-desktop)!
 
@@ -64,6 +64,7 @@ Once your changes are ready, don't forget to
 ### Pull Request
 
 When you're finished with the changes, create a pull request, also known as a PR.
+
 - Fill the "Ready for review" template so that we can review your PR. This template
   helps reviewers understand your changes as well as the purpose of your pull request.
 - Don't forget to [link PR to
@@ -75,6 +76,7 @@ When you're finished with the changes, create a pull request, also known as a PR
 
 Once you submit your PR, a team member will review your proposal. We may ask
 questions or request for additional information.
+
 - We may ask for changes to be made before a PR can be merged, either using [suggested
   changes](https://docs.github.com/en/github/collaborating-with-issues-and-pull-requests/incorporating-feedback-in-your-pull-request)
   or pull request comments. You can apply suggested changes directly through the UI.

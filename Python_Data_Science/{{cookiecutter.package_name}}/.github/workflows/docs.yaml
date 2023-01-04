@@ -4,43 +4,43 @@ name: website
 on:
   push:
     branches:
-      - main
+    - main
 
 # Security: restrict permissions for CI jobs.
 permissions:
   contents: read
 
+# Build the documentation and upload the static HTML files as an artifact.
 jobs:
-  # Build the documentation and upload the static HTML files as an artifact.
   build:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v3
+    - uses: actions/checkout@v3
 
-      - name: Install Poetry
-        run: pipx install poetry
+    - name: Install Poetry
+      run: pipx install poetry
 
-      - name: Set up Python
-        uses: actions/setup-python@v4
-        with:
-          python-version: "3.10"
-          cache: "poetry"
+    - name: Set up Python
+      uses: actions/setup-python@v4
+      with:
+        python-version: '3.10'
+        cache: poetry
 
-      - name: Install Dependencies
-        run: poetry install
+    - name: Install Dependencies
+      run: poetry install
 
-      - name: Build documentation
-        run: |
-          poetry env use "3.10"
-          poetry run pdoc --docformat google src/{{ cookiecutter.package_name }} -o docs
-      - name: Compress documentation
-        run: tar --directory docs/ -hcf artifact.tar .
+    - name: Build documentation
+      run: |
+        poetry env use "3.10"
+        poetry run pdoc --docformat google src/{{ cookiecutter.package_name }} -o docs
+    - name: Compress documentation
+      run: tar --directory docs/ -hcf artifact.tar .
 
-      - name: Upload documentation
-        uses: actions/upload-artifact@v3
-        with:
-          name: github-pages
-          path: ./artifact.tar
+    - name: Upload documentation
+      uses: actions/upload-artifact@v3
+      with:
+        name: github-pages
+        path: ./artifact.tar
 
   # Deploy the artifact to GitHub pages.
   # This is a separate job so that only actions/deploy-pages has the necessary permissions.
@@ -52,7 +52,7 @@ jobs:
       id-token: write
     environment:
       name: github-pages
-      url: {% raw %}${{ steps.deployment.outputs.page_url }}{% endraw %}
+      url: ${{ steps.deployment.outputs.page_url }}
     steps:
-      - id: deployment
-        uses: actions/deploy-pages@v1
+    - id: deployment
+      uses: actions/deploy-pages@v1
